@@ -3,7 +3,7 @@
 
 % There are totally 6 sections in the code divided according to the problem
 %statement and based on number of agents. Each section can be run
-%seperately to get the desired results
+%seperately to get the desired results.
 
 %Section 1: Helical Trajectory tracking with formation for 3 agents.
 %Section 2: Helical Trajectory tracking with formation for 4 agents.
