@@ -28,12 +28,15 @@ Two Scenarios where conidered
 1. Three agest with the following communication pattern
 <img width="684" alt="Screenshot 2024-03-22 at 10 20 48" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/07c68138-ee9f-4b53-8e72-66037561ff1a">
 
+
 2. Four agents with the comminication pattern  shown in the picture.
 <img width="684" alt="Screenshot 2024-03-22 at 10 21 31" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/c729b127-7135-40b4-8b8f-61f2328d9a02">
 
-**Results Obtained**
-1. Formation control of 4 agesnts starting at random initial position and ending
 
-3. <img width="726" alt="Screenshot 2024-03-22 at 10 22 13" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/b9ec46a8-22e8-483e-8bed-83bd8f15397c">
+**Results Obtained**
+1. Formation control of 3 agents starting at random initial position and following helical trajectory
+<img width="726" alt="Screenshot 2024-03-22 at 10 22 13" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/b9ec46a8-22e8-483e-8bed-83bd8f15397c">
+
+2.Formation control of 3 agents starting at random initial position and following helical trajectory
 <img width="726" alt="Screenshot 2024-03-22 at 10 22 42" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/c51198fe-8114-4e51-8f49-b0d78a5d1069">
 <img width="726" alt="Screenshot 2024-03-22 at 10 23 01" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/2c0181aa-f99f-4646-8a17-d0780df07b18">
