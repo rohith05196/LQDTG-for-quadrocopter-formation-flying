@@ -24,7 +24,11 @@ and also, extended to trajectory tracking with formation control
 **Brief description of the workflow is depicted by the following flowchart.**
 <img width="979" alt="image" src="https://github.com/RohithKamathMijar/LQDTGNew/assets/94147428/edb43c6a-6933-4514-b3da-d227d415920d">
 
+Two Scenarios where conidered 
+1. Three agest with the following communication pattern
 <img width="684" alt="Screenshot 2024-03-22 at 10 20 48" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/07c68138-ee9f-4b53-8e72-66037561ff1a">
+
+2. Four agents with the comminication pattern  shown in the picture.
 <img width="684" alt="Screenshot 2024-03-22 at 10 21 31" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/c729b127-7135-40b4-8b8f-61f2328d9a02">
 
 **Results Obtained**
