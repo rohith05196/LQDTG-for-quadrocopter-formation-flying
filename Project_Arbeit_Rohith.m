@@ -1,4 +1,4 @@
-                             %Project_Arbeit_Rohith
+
 % Linear Quadratic Distributed-Time Game for Quadrocopter Formation Control
 
 % There are totally 6 sections in the code divided according to the problem
@@ -11,21 +11,21 @@
 %Section 4: Infinity Trajectory tracking with formation for 4 agents.
 %Section 5: Formation Control for 3 agents without Trajectory tracking
 %Section 6: Formation Control for 3 agents using Receding Horizon method
-            % without Trajectory tracking
+% without Trajectory tracking
 
 %%
-                 %****************Section 1***********************
-             %Helical Trajectory tracking with formation for 3 agents 
+%****************Section 1***********************
+%Helical Trajectory tracking with formation for 3 agents
 clear all
 close all
 clc
-n = 3; %Dimensional Plane
-N = 3; %number of agents
-M = 2; %number of edges
-ns = 12; % number of states
-ni =4;  %number of inputs
-tf = 20; % t final
-dt = 0.1; %steps
+n = 3;      %Dimensional Plane
+N = 3;      %number of agents
+M = 2;      %number of edges
+ns = 12;    % number of states
+ni =4;      %number of inputs
+tf = 20;    % t final
+dt = 0.1;   %steps
 eta =4;
 Np = 0;
 
@@ -217,10 +217,10 @@ for idx=1:Np+1
         uhat(:,k) = usol;
         e(:,k+1) = Fpinv * e(:,k) + Gpinv*uhat(:,k);
         xhat(:,k+1) = e(:,k)+r(:,k);
-        
-    end
 
     end
+
+end
 
 
 %plot to get the formation and TRajectory tracking.
@@ -277,8 +277,8 @@ xlim([0 600])
 
 
 %%
-                   %****************Section 3***********************
-             %Helical Trajectory tracking with formation for 4 agents 
+%****************Section 3***********************
+%Helical Trajectory tracking with formation for 4 agents
 
 clear all
 close all
@@ -536,8 +536,8 @@ ylabel('y-axis');
 
 %%
 
-                %****************Section 3***********************
-             %Infinity Trajectory tracking with formation for 3 agents 
+%****************Section 3***********************
+%Infinity Trajectory tracking with formation for 3 agents
 clear all
 close all
 clc
@@ -773,8 +773,8 @@ xlabel('x-axis');
 ylabel('y-axis');
 
 %%
-                %****************Section 4***********************
-             %Infinity Trajectory tracking with formation for 4 agents 
+%****************Section 4***********************
+%Infinity Trajectory tracking with formation for 4 agents
 
 clear all
 close all
@@ -1031,12 +1031,12 @@ ylabel('y-axis');
 
 %%
 
-                %****************Section 5***********************
-             %Formation Control for 3 agents without Trajectory tracking 
-             %This section has two problems 1. Corresponding to Nash
-             %Equilibrium and 2. The distributed problem Inorder to solve
-             %Problem 2 First part of section must be run as problem 2
-             %takes values from problem 1.
+%****************Section 5***********************
+%Formation Control for 3 agents without Trajectory tracking
+%This section has two problems 1. Corresponding to Nash
+%Equilibrium and 2. The distributed problem Inorder to solve
+%Problem 2 First part of section must be run as problem 2
+%takes values from problem 1.
 clear all
 close all
 clc
@@ -1053,8 +1053,8 @@ Np = 0;
 
 step = 100;
 
-           %**************************start***********************
-             %************************Problem1**********************
+%**************************start***********************
+%************************Problem1**********************
 
 % individual elements for A matrix
 A11i =zeros(2*n);
@@ -1113,7 +1113,7 @@ for i = 1:N
         (-D*W(:,:,i)*d)', d'*W(:,:,i)*d, zeros(1,2*N*n);
         zeros(2*N*n), zeros(2*N*n,1), L(:,:,i)];
     Qn(:,:,i) = [Q(1:18,1:18,i), Q(20:37,20:37,i);Q(20:37,1:18,i), Q(20:37,20:37. ...
-    ,i)]
+        ,i)]
     %Terminal weights
     WTtemp(:,:,i) = eta*diag(mui(i,:));
     WT(:,:,i) = kron(WTtemp(:,:,i),eye(2*n));
@@ -1169,7 +1169,7 @@ for k=1:100
     xb(:,k+1)  = F * xb(:,k) +  Gb(:,:,1)*ub(:,:,1,k) + Gb(:,:,2)*ub(:,:,2,k) + Gb(:,:,3)*ub(:,:,3,k);
     % x(:,k+1) = inv(Lam(:,:,k)) * F * x(:,k);
     for l =1:N
-      Jn(:,l,k) =  xb(:,k)'*Q(:,:,l)*xb(:,k) + uball(1:4,k)'*Rb*uball(1:4,k)+ uball(5:8,k)'*Rb*uball(5:8,k) + uball(9:12,k)'*Rb*uball(9:12,k); 
+        Jn(:,l,k) =  xb(:,k)'*Q(:,:,l)*xb(:,k) + uball(1:4,k)'*Rb*uball(1:4,k)+ uball(5:8,k)'*Rb*uball(5:8,k) + uball(9:12,k)'*Rb*uball(9:12,k);
     end
 
 end
@@ -1196,8 +1196,8 @@ title('Motion trajectories of each agent','fontweight','bold','fontsize',12)
 grid on
 set(gca,'color',[0.9,0.9,0.9]);
 %%
-           %*******************start************************
-            %*****************problem 2 Distributed*********
+%*******************start************************
+%*****************problem 2 Distributed*********
 
 Ap1 = [A11i,A12i;
     A21i,A22i];
@@ -1290,8 +1290,8 @@ for idx=1:Np+1
         term1 = (Ft + Gt*Kt(:,:,end))' * Qft * (Ft + Gt*Kt(:,:,end)) - Qft;
         term2 = -Qt - Kt(:,:,end)'*Rt*Kt(:,:,end);
         for l = 1:N
-        Jt(:,l,k) =  xpinv(:,k)'*Qn(:,:,l)*xpinv(:,k) + upinv(1:4,k)'*Rb*upinv(1:4,k)+ upinv(5:8,k)'*Rb*upinv(5:8,k)+ upinv(9:12,k)'*Rb*upinv(9:12,k);
-    end  
+            Jt(:,l,k) =  xpinv(:,k)'*Qn(:,:,l)*xpinv(:,k) + upinv(1:4,k)'*Rb*upinv(1:4,k)+ upinv(5:8,k)'*Rb*upinv(5:8,k)+ upinv(9:12,k)'*Rb*upinv(9:12,k);
+        end
 
     end
 end
@@ -1336,9 +1336,9 @@ grid on
 set(gca,'color',[0.9,0.9,0.9]);
 
 %%
-                  %****************Section 6***********************
-             %Formation Control for 3 agents using Receding Horizon method
-                       %  without Trajectory tracking
+%****************Section 6***********************
+%Formation Control for 3 agents using Receding Horizon method
+%  without Trajectory tracking
 clear all
 close all
 clc
