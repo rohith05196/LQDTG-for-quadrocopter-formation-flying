@@ -13,7 +13,6 @@ and also, extended to trajectory tracking with formation control
 
 
 
-
 **The Project invoved these steps.**
 
 1. Familiarization with the concept of a Nash equilibrium and its Riccati solution.
@@ -53,6 +52,9 @@ Two Scenarios where conidered
 <img width="726" alt="Screenshot 2024-03-22 at 10 23 01" src="https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/2c0181aa-f99f-4646-8a17-d0780df07b18">
 
 
+
+Finally It can be seen from the plot below that the distubuted solution (Blue) converges to the centralized solution (Red) 
+but the control efforts need to solve former method is very small comapred to that required for centralized approach as we deal with sparse matrix (WIth Many Zeros)
 
 ![image](https://github.com/RohithKamathMijar/LQDTG_Rohith/assets/94147428/5dcbc0e4-9653-40f8-9788-2b829b9e4eb0)
 
