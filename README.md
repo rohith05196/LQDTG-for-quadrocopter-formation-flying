@@ -1,6 +1,6 @@
 # LQDTG
 
-## LQDTG stands for Linear Quadratic Discrete time Games for Quadro copter formation flying.**
+## LQDTG stands for Linear Quadratic Discrete time Games for Quadro copter formation flying.
 
 The Problem is modeled as a game where each vertices of the communication graph represents an agent/player
 which minimizes its individual finite horizon-cost function in turn reaching the Nash
