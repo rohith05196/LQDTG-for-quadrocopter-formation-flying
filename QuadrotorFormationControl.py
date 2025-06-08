@@ -36,20 +36,15 @@ class QuadrotorFormationControl:
         self.setup_matrices()
         t = np.linspace(0, self.tf, int(self.tf / self.dt))
         if self.section in [1, 2]:
-            # Helical Trajectory
             x1 = np.sin(t)
             y1 = np.cos(t)
             z1 = t * 0.1
         else:
-            # Infinity Trajectory
             x1 = np.sin(t)
             y1 = np.sin(2 * t)
             z1 = t * 0.1
 
-        if self.section in [1, 3, 5, 6]:
-            agents = 3
-        else:
-            agents = 4
+        agents = 3 if self.section in [1, 3, 5, 6] else 4
 
         trajectories = []
         for i in range(agents):
@@ -60,12 +55,15 @@ class QuadrotorFormationControl:
                 z1
             ])
 
-        # Plot the 3D trajectories for all the cases 
         fig = plt.figure()
         ax = fig.add_subplot(111, projection='3d')
+        lines = []
         for i, traj in enumerate(trajectories):
-            ax.plot(traj[0], traj[1], traj[2], label=f'Agent {i+1}')
-        ax.legend()
+            line, = ax.plot(traj[0], traj[1], traj[2])
+            lines.append(line)
+            ax.scatter(traj[0][0], traj[1][0], traj[2][0], c='black', marker='o', s=50)
+            ax.scatter(traj[0][-1], traj[1][-1], traj[2][-1], c='red', marker='^', s=50)
+        ax.legend(lines, [f'Agent {i+1}' for i in range(agents)])
         ax.set_title(f'Section {self.section}: Trajectory Tracking for {agents} agents')
         ax.set_xlabel('X')
         ax.set_ylabel('Y')
